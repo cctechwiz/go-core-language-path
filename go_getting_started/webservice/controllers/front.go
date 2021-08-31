@@ -3,7 +3,7 @@ package controllers
 import "net/http"
 
 func RegisterControllers() {
-	us := newUserController()
+	uc := newUserController()
 
 	http.Handle("/users", *uc)
 	http.Handle("/users/", *uc)
