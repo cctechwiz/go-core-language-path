@@ -32,7 +32,7 @@ func AddUser(u User) (User, error) {
 
 func GetUserById(id int) (User, error) {
 	for _, u := range users {
-		if u.Id == id {
+		if u.ID == id {
 			return *u, nil
 		}
 	}
@@ -46,7 +46,7 @@ func UpdateUser(u User) (User, error) {
 			return u, nil
 		}
 	}
-	return User{}, fmt.Errorf("User with ID '%v' not found", id)
+	return User{}, fmt.Errorf("User with ID '%v' not found", u.ID)
 }
 
 func RemoveUserById(id int) error {
